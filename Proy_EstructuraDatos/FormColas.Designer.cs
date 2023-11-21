@@ -39,7 +39,17 @@
             panelLogo = new Panel();
             pcLogo = new PictureBox();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            label5 = new Label();
+            txtGenero = new TextBox();
+            txtDuracion = new TextBox();
+            txtInterprete = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtNombreCancion = new TextBox();
+            button1 = new Button();
+            Pilas = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcLogo).BeginInit();
@@ -175,19 +185,120 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonFace;
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(txtGenero);
+            panel1.Controls.Add(txtDuracion);
+            panel1.Controls.Add(txtInterprete);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(txtNombreCancion);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(Pilas);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(311, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(740, 556);
             panel1.TabIndex = 5;
             // 
-            // textBox1
+            // label5
             // 
-            textBox1.Location = new Point(215, 220);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(289, 31);
-            textBox1.TabIndex = 0;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(160, 211);
+            label5.Name = "label5";
+            label5.Size = new Size(119, 32);
+            label5.TabIndex = 21;
+            label5.Text = "Interprete";
+            // 
+            // txtGenero
+            // 
+            txtGenero.Location = new Point(160, 408);
+            txtGenero.Name = "txtGenero";
+            txtGenero.Size = new Size(420, 31);
+            txtGenero.TabIndex = 20;
+            // 
+            // txtDuracion
+            // 
+            txtDuracion.Location = new Point(160, 327);
+            txtDuracion.Name = "txtDuracion";
+            txtDuracion.Size = new Size(420, 31);
+            txtDuracion.TabIndex = 19;
+            // 
+            // txtInterprete
+            // 
+            txtInterprete.Location = new Point(160, 246);
+            txtInterprete.Name = "txtInterprete";
+            txtInterprete.Size = new Size(420, 31);
+            txtInterprete.TabIndex = 18;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(160, 211);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 32);
+            label4.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(160, 292);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 32);
+            label3.TabIndex = 16;
+            label3.Text = "Duracion";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(160, 373);
+            label2.Name = "label2";
+            label2.Size = new Size(92, 32);
+            label2.TabIndex = 15;
+            label2.Text = "Genero";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(160, 117);
+            label1.Name = "label1";
+            label1.Size = new Size(250, 32);
+            label1.TabIndex = 14;
+            label1.Text = "Nombre de la cancion";
+            // 
+            // txtNombreCancion
+            // 
+            txtNombreCancion.Location = new Point(160, 163);
+            txtNombreCancion.Name = "txtNombreCancion";
+            txtNombreCancion.Size = new Size(420, 31);
+            txtNombreCancion.TabIndex = 13;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(562, 434);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 53);
+            button1.TabIndex = 3;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // Pilas
+            // 
+            Pilas.AutoSize = true;
+            Pilas.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            Pilas.ForeColor = SystemColors.ActiveCaptionText;
+            Pilas.Location = new Point(359, 40);
+            Pilas.Name = "Pilas";
+            Pilas.Size = new Size(100, 45);
+            Pilas.TabIndex = 2;
+            Pilas.Text = "Colas";
+            Pilas.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormColas
             // 
@@ -219,6 +330,16 @@
         private Panel panelLogo;
         private PictureBox pcLogo;
         private Panel panel1;
-        private TextBox textBox1;
+        private Label Pilas;
+        private Button button1;
+        private Label label5;
+        private TextBox txtGenero;
+        private TextBox txtDuracion;
+        private TextBox txtInterprete;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox txtNombreCancion;
     }
 }

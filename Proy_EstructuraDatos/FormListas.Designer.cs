@@ -38,12 +38,27 @@
             btnGuardarList = new Button();
             panelLogo = new Panel();
             pcLogo = new PictureBox();
-            panel1 = new Panel();
-            textBox1 = new TextBox();
+            pnlGuardar = new Panel();
+            label5 = new Label();
+            txtGenero = new TextBox();
+            txtDuracion = new TextBox();
+            txtInterprete = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtCancion = new TextBox();
+            btnGuardar = new Button();
+            Pilas = new Label();
+            pnlMostrar = new Panel();
+            gridCaciones = new DataGridView();
+            label11 = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcLogo).BeginInit();
-            panel1.SuspendLayout();
+            pnlGuardar.SuspendLayout();
+            pnlMostrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridCaciones).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -88,6 +103,7 @@
             btnMostrarList.TabIndex = 5;
             btnMostrarList.Text = "Mostrar";
             btnMostrarList.UseVisualStyleBackColor = true;
+            btnMostrarList.Click += btnMostrarList_Click;
             // 
             // btnBuscarList
             // 
@@ -152,6 +168,7 @@
             btnGuardarList.TabIndex = 1;
             btnGuardarList.Text = "Guardar";
             btnGuardarList.UseVisualStyleBackColor = true;
+            btnGuardarList.Click += btnGuardarList_Click;
             // 
             // panelLogo
             // 
@@ -172,37 +189,176 @@
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
             // 
-            // panel1
+            // pnlGuardar
             // 
-            panel1.BackColor = SystemColors.ButtonFace;
-            panel1.Controls.Add(textBox1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(311, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(854, 546);
-            panel1.TabIndex = 3;
+            pnlGuardar.BackColor = SystemColors.ButtonFace;
+            pnlGuardar.Controls.Add(label5);
+            pnlGuardar.Controls.Add(txtGenero);
+            pnlGuardar.Controls.Add(txtDuracion);
+            pnlGuardar.Controls.Add(txtInterprete);
+            pnlGuardar.Controls.Add(label4);
+            pnlGuardar.Controls.Add(label3);
+            pnlGuardar.Controls.Add(label2);
+            pnlGuardar.Controls.Add(label1);
+            pnlGuardar.Controls.Add(txtCancion);
+            pnlGuardar.Controls.Add(btnGuardar);
+            pnlGuardar.Controls.Add(Pilas);
+            pnlGuardar.Dock = DockStyle.Fill;
+            pnlGuardar.Location = new Point(311, 0);
+            pnlGuardar.Name = "pnlGuardar";
+            pnlGuardar.Size = new Size(854, 546);
+            pnlGuardar.TabIndex = 3;
+            pnlGuardar.Visible = false;
             // 
-            // textBox1
+            // label5
             // 
-            textBox1.Location = new Point(215, 220);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(289, 31);
-            textBox1.TabIndex = 0;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(148, 220);
+            label5.Name = "label5";
+            label5.Size = new Size(119, 32);
+            label5.TabIndex = 21;
+            label5.Text = "Interprete";
+            // 
+            // txtGenero
+            // 
+            txtGenero.Location = new Point(148, 417);
+            txtGenero.Name = "txtGenero";
+            txtGenero.Size = new Size(420, 31);
+            txtGenero.TabIndex = 20;
+            // 
+            // txtDuracion
+            // 
+            txtDuracion.Location = new Point(148, 336);
+            txtDuracion.Name = "txtDuracion";
+            txtDuracion.Size = new Size(420, 31);
+            txtDuracion.TabIndex = 19;
+            // 
+            // txtInterprete
+            // 
+            txtInterprete.Location = new Point(148, 255);
+            txtInterprete.Name = "txtInterprete";
+            txtInterprete.Size = new Size(420, 31);
+            txtInterprete.TabIndex = 18;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(148, 220);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 32);
+            label4.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(148, 301);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 32);
+            label3.TabIndex = 16;
+            label3.Text = "Duracion";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(148, 382);
+            label2.Name = "label2";
+            label2.Size = new Size(92, 32);
+            label2.TabIndex = 15;
+            label2.Text = "Genero";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(148, 126);
+            label1.Name = "label1";
+            label1.Size = new Size(250, 32);
+            label1.TabIndex = 14;
+            label1.Text = "Nombre de la cancion";
+            // 
+            // txtCancion
+            // 
+            txtCancion.Location = new Point(148, 172);
+            txtCancion.Name = "txtCancion";
+            txtCancion.Size = new Size(420, 31);
+            txtCancion.TabIndex = 13;
+            txtCancion.TextChanged += textBox1_TextChanged;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(678, 441);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(127, 53);
+            btnGuardar.TabIndex = 4;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // Pilas
+            // 
+            Pilas.AutoSize = true;
+            Pilas.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            Pilas.ForeColor = SystemColors.ActiveCaptionText;
+            Pilas.Location = new Point(226, 51);
+            Pilas.Name = "Pilas";
+            Pilas.Size = new Size(457, 45);
+            Pilas.TabIndex = 2;
+            Pilas.Text = "Listas simplemente enlazadas";
+            // 
+            // pnlMostrar
+            // 
+            pnlMostrar.BackColor = SystemColors.ButtonFace;
+            pnlMostrar.Controls.Add(gridCaciones);
+            pnlMostrar.Controls.Add(label11);
+            pnlMostrar.Dock = DockStyle.Fill;
+            pnlMostrar.Location = new Point(311, 0);
+            pnlMostrar.Name = "pnlMostrar";
+            pnlMostrar.Size = new Size(854, 546);
+            pnlMostrar.TabIndex = 4;
+            // 
+            // gridCaciones
+            // 
+            gridCaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridCaciones.Location = new Point(97, 126);
+            gridCaciones.Name = "gridCaciones";
+            gridCaciones.RowHeadersWidth = 62;
+            gridCaciones.RowTemplate.Height = 33;
+            gridCaciones.Size = new Size(652, 225);
+            gridCaciones.TabIndex = 3;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.ActiveCaptionText;
+            label11.Location = new Point(226, 51);
+            label11.Name = "label11";
+            label11.Size = new Size(457, 45);
+            label11.TabIndex = 2;
+            label11.Text = "Listas simplemente enlazadas";
             // 
             // FormListas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 546);
-            Controls.Add(panel1);
+            Controls.Add(pnlMostrar);
+            Controls.Add(pnlGuardar);
             Controls.Add(panelMenu);
             Name = "FormListas";
             Text = "FormListas";
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcLogo).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlGuardar.ResumeLayout(false);
+            pnlGuardar.PerformLayout();
+            pnlMostrar.ResumeLayout(false);
+            pnlMostrar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gridCaciones).EndInit();
             ResumeLayout(false);
         }
 
@@ -218,7 +374,20 @@
         private Button btnGuardarList;
         private Panel panelLogo;
         private PictureBox pcLogo;
-        private Panel panel1;
-        private TextBox textBox1;
+        private Panel pnlGuardar;
+        private Label Pilas;
+        private Button btnGuardar;
+        private Label label5;
+        private TextBox txtGenero;
+        private TextBox txtDuracion;
+        private TextBox txtInterprete;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox txtCancion;
+        private Panel pnlMostrar;
+        private Label label11;
+        private DataGridView gridCaciones;
     }
 }

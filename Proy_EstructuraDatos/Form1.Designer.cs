@@ -37,6 +37,7 @@
             pcLogo = new PictureBox();
             panel1 = new Panel();
             label1 = new Label();
+            Pilas = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcLogo).BeginInit();
@@ -135,6 +136,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonFace;
+            panel1.Controls.Add(Pilas);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(311, 0);
@@ -145,13 +147,24 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(422, 286);
+            label1.Location = new Point(432, 70);
             label1.Name = "label1";
-            label1.Size = new Size(204, 38);
+            label1.Size = new Size(293, 54);
             label1.TabIndex = 0;
             label1.Text = "BIENVENIDO/A";
+            // 
+            // Pilas
+            // 
+            Pilas.AutoSize = true;
+            Pilas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Pilas.ForeColor = SystemColors.ActiveCaptionText;
+            Pilas.Location = new Point(422, 225);
+            Pilas.Name = "Pilas";
+            Pilas.Size = new Size(312, 32);
+            Pilas.TabIndex = 2;
+            Pilas.Text = "Elija una opcion en el menu";
             // 
             // Form1
             // 
@@ -184,5 +197,6 @@
         private Button btnPilas;
         private Button btnLista;
         private Label label1;
+        private Label Pilas;
     }
 }
